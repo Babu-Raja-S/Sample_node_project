@@ -1,0 +1,21 @@
+{
+    "appenders" : {
+        "error" : { 
+            "type" : "file", 
+            "filename" : "../logs/Error.log", 
+            "maxLogSize" : 30000000, 
+            "backups" : 1
+        },
+        "userDetails" : {
+            "type" : "file", 
+            "filename" : "../logs/UserDetails.log", 
+            "maxLogSize" : 30000000, 
+            "backups" : 1
+        }
+    },
+    "categories" : {
+        "default" : { "appenders" : ["userDetails"], "level" : "debug" },
+        "userDetails" : { "appenders" : ["userDetails"], "level" : "debug" },
+        "error" : { "appenders" : ["error"], "level" : "error" }
+    }
+}
